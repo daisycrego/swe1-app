@@ -1,2 +1,1 @@
-web: gunicorn djangoapp-dbc291.wsgi
-web:gunicorn app:app
+web: gunicorn djangofun1.wsgi
