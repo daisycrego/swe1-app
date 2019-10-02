@@ -32,7 +32,7 @@ SECRET_KEY = '=d#n#92#%ql#@=drqgs)k^joptps(=py6w7ss+t1@69g43d9*g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['djangofun1.herokuapp.com']
 
 
 # Application definition
