@@ -30,9 +30,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = '=d#n#92#%ql#@=drqgs)k^joptps(=py6w7ss+t1@69g43d9*g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['djangofun1.herokuapp.com']
+ALLOWED_HOSTS = ['djangofun1.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
