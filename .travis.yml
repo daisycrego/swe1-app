@@ -11,4 +11,5 @@ install:
 # command to run tests
 script:
   - black --check --diff .
+  - flake8 --max-line-length=88 .
   - pytest tests.py
