@@ -8,9 +8,15 @@ install:
   - pip install -U pytest
   - pip install black
   - pip install flake8
+  - pip install
+  - pip install python-coveralls
 
 # command to run tests
 script:
   - black --exclude --check --diff .
   - flake8 --exclude venv --max-line-length=88 .
-  - pytest tests.py
+  - pytest tests/tests.py --cov=tests
+  - pytest coveralls/tests.py --doctest-modules --pep8 coveralls -v --cov coveralls --cov-report term-missing
+
+after_success:
+  - coveralls
