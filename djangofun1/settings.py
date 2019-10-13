@@ -14,12 +14,9 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#STATIC_ROOT = "/Users/porkchop/Library/Mobile Documents/com~apple~CloudDocs/ms/se1_python/djangoapp-dbc291/djangoapp-dbc291/static"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), os.path.join(BASE_DIR, 'polls/static')]
-
-#STATIC_ROOT = ''
 
 # https://stackoverflow.com/questions/23215581/unable-to-perform-collectstatic
 #PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
