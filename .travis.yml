@@ -2,6 +2,7 @@ language: python
 python:
   - "3.6"      # current default Python on Travis CI
   - "3.7"
+
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -15,10 +16,7 @@ install:
 script:
   - black --exclude --check --diff .
   - flake8 --exclude venv --max-line-length=88 .
-  - coverage run tests.py
-  - cd ..
-  - pytest tests.py --cov=swe1Now
-  - pytest swe1Now/tests.py --doctest-modules --pep8 swe1Now -v --cov=swe1Now --cov-report term-missing
+  - coverage run --source=swe1,polls manage.py test
 
 after_success:
   - coveralls
