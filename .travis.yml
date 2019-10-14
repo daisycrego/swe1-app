@@ -11,7 +11,8 @@ install:
 script:
   - black --check --diff .
   - flake8 --max-line-length=88 .
-  - coverage run --source=polls,uplyft manage.py test polls
+  - cd ..
+  - coverage run --source=swe1Now/polls swe1Now/manage.py test polls
 
 after_success:
   coveralls
