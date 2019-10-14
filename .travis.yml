@@ -18,7 +18,7 @@ script:
   - coverage run tests.py
   - cd ..
   - pytest tests.py --cov=swe1Now
-  - pytest swe1Now/tests.py --doctest-modules --pep8 swe1Now -v --cov swe1Now --cov-report term-missing
+  - pytest swe1Now/tests.py --doctest-modules --pep8 swe1Now -v --cov=swe1Now --cov-report term-missing
 
 after_success:
   - coveralls
