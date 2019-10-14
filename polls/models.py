@@ -7,7 +7,7 @@ from django.utils import timezone
 
 
 class Question(models.Model):
-    app_label = 'polls'
+    app_label = "polls"
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published")
 
