@@ -6,11 +6,12 @@ python:
 install:
   - pip install -r requirements.txt
   - pip install -U pytest
-  - pip install black
-  - pip install flake8
 
 # command to run tests
 script:
   - black --check --diff .
   - flake8 --max-line-length=88 .
-  - pytest tests.py
+  - coverage run --source=swe1,polls manage.py test
+
+after_success:
+  coveralls
